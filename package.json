@@ -1,0 +1,24 @@
+{
+  "name": "new-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YVeselovskyi/new-portfolio.git"
+  },
+  "author": "Yaroslav Veselovskyi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YVeselovskyi/new-portfolio/issues"
+  },
+  "homepage": "https://github.com/YVeselovskyi/new-portfolio#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  }
+}
