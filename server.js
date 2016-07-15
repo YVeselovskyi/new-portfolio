@@ -12,7 +12,7 @@ app.engine('ejs' , ejsMate);
 app.set('view engine', 'ejs');
 
 app.get('/' , (req, res) => {
-  res.render('main/home');
+  res.render('main/index');
 });
 
 app.get('/about' , (req, res) => {
