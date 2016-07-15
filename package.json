@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/YVeselovskyi/new-portfolio#readme",
   "dependencies": {
+    "ejs": "^2.4.2",
+    "ejs-mate": "^2.3.0",
     "express": "^4.14.0",
     "gulp": "^3.9.1",
     "gulp-sass": "^2.3.2"
