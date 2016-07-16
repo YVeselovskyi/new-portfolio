@@ -27,8 +27,13 @@ app.get('/contacts' , (req, res) => {
   res.render('main/contacts', {title: 'Contacts'});
 });
 
+
+
 app.use('/', express.static(__dirname + '/public/assets'));
 
+app.use( (req, res, next) => {
+  res.status(404).render('main/404');
+});
 
 app.listen(port, function() {
   console.log("Listening on " + port);
