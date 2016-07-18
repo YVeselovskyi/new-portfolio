@@ -17,10 +17,12 @@
   },
   "homepage": "https://github.com/YVeselovskyi/new-portfolio#readme",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "ejs": "^2.4.2",
     "ejs-mate": "^2.3.0",
     "express": "^4.14.0",
     "gulp": "^3.9.1",
-    "gulp-sass": "^2.3.2"
+    "gulp-sass": "^2.3.2",
+    "nodemailer": "^2.5.0"
   }
 }
