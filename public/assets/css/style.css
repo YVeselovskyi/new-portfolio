@@ -1,6 +1,19 @@
-/* =============================================================================
- * HTML5 CSS Reset Minified - Eric Meyer
- * ========================================================================== */
+@font-face {
+  font-family: Stellar-Bold;
+  src: url("../fonts/stellar/StellarBold.otf"); }
+
+@font-face {
+  font-family: StellarMedium;
+  src: url("../fonts/stellar/StellarMedium.otf"); }
+
+@font-face {
+  font-family: StellarRegular;
+  src: url("../fonts/stellar/StellarRegular.otf"); }
+
+@font-face {
+  font-family: StellarLight;
+  src: url("../fonts/stellar/StellarLight.otf"); }
+
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -79,7 +92,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font: normal 75% Arial, Helvetica, sans-serif; }
+  font-size: 1em; }
 
 canvas {
   display: block;
@@ -143,7 +156,9 @@ nav {
   display: inline-block;
   font-size: 14px; }
   .main-menu li {
-    line-height: 1.75em; }
+    line-height: 1.75em;
+    font-family: StellarLight;
+    font-size: 1em; }
 
 .underlined-white {
   display: inline-block;
@@ -168,7 +183,8 @@ nav {
   color: white;
   text-transform: uppercase; }
   #main-info p {
-    font-size: 20px; }
+    font-size: 2em;
+    font-family: StellarLight; }
 
 .about {
   height: 100%;

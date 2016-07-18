@@ -38,3 +38,10 @@ body {
     opacity: 0; }
   100% {
     opacity: 1; } }
+
+#thanks-message {
+  display: none;
+  animation: fadein 3s; }
+
+#progress-bar {
+  width: 0%; }
