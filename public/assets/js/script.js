@@ -1,25 +1,32 @@
-$(document).ready(function(){
-    $('#email-form').submit(function(e){
-        var firstName=$('#first_name').val();
-        var lastName=$('#last_name').val();
-        var eMail=$('#email').val();
-        var message=$('#message').val();
+var form = document.getElementById('email-form');
 
-        $.post('http://localhost:1927/send-email',{
-            firstName: firstName,
-            lastName: lastName,
-            eMail: eMail,
-            message: message
-        }, function(data){
-            if(data==='done')
-            {
-                console.log('login success');
-            }
-        });
+var xhr = new XMLHttpRequest();
 
-        e.preventDefault();
+form.addEventListener( 'submit' , function(e) {
+
+    var firstName=document.getElementById('first_name').value;
+    var lastName=document.getElementById('last_name').value;
+    var eMail=document.getElementById('email').value;
+    var message=document.getElementById('message').value;
+
+    var data = JSON.stringify({
+        firstName: firstName,
+        lastName: lastName,
+        eMail: eMail,
+        message: message
     });
+
+    xhr.open('POST', 'https://yveselovskyi.herokuapp.com/send-email', true);
+    xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+
+    xhr.send(data);
+
+    e.preventDefault();
 });
+
+
+
+
 
 
 

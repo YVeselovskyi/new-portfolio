@@ -34,10 +34,6 @@ app.get('/contacts' , (req, res) => {
 app.use('/', express.static(__dirname + '/public/assets'));
 
 app.post('/send-email' , (req, res) => {
-  let firstName = req.body.firstName;
-  let lastName = req.body.lastName;
-  let eMail = req.body.eMail;
-  let message = req.body.message;
 
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport('smtps://yaroslavveselovskyi@gmail.com:19dynamokyiv94@smtp.gmail.com');
@@ -47,8 +43,8 @@ app.post('/send-email' , (req, res) => {
     from: '"Fred Foo 👥" <foo@blurdybloop.com>', // sender address
     to: '19dynamokyiv94@gmail.com', // list of receivers
     subject: 'Hello ✔', // Subject line
-    text: 'Hello world 🐴', // plaintext body
-    html: '<b>Hello world 🐴</b>' // html body
+    text: req.body.message, // plaintext body
+    html: req.body.message // html body
   };
 
   // send mail with defined transport object
