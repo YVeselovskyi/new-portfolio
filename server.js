@@ -52,7 +52,7 @@ app.post('/send-email' , (req, res) => {
   };
 
   // send mail with defined transport object
-  transporter.sendMail(mailOptions, function(error, info){
+  transporter.sendMail(mailOptions, (error, info) => {
     if(error){
       return console.log(error);
     }
@@ -66,6 +66,6 @@ app.use( (req, res, next) => {
   res.status(404).render('main/404');
 });
 
-app.listen(port, function() {
+app.listen(port, () => {
   console.log("Listening on " + port);
 });
