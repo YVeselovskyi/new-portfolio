@@ -20,8 +20,6 @@ var progressMove = function () {
 
 form.addEventListener( 'submit' , function(e) {
 
-    progressMove();
-
     var firstName=document.getElementById('first_name').value;
     var lastName=document.getElementById('last_name').value;
     var eMail=document.getElementById('email').value;
@@ -40,7 +38,7 @@ form.addEventListener( 'submit' , function(e) {
         }
     };
 
-    xhr.open('POST', 'http://localhost:1927/send-email', true);
+    xhr.open('POST', 'http://yveselovskyi.herokuapp.com/send-email', true);
     xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
 
     xhr.send(data);
