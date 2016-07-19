@@ -1,0 +1,23 @@
+@font-face {
+  font-family: Stellar-Bold;
+  src: url("../fonts/stellar/StellarBold.otf"); }
+
+@font-face {
+  font-family: StellarMedium;
+  src: url("../fonts/stellar/StellarMedium.otf"); }
+
+@font-face {
+  font-family: StellarRegular;
+  src: url("../fonts/stellar/StellarRegular.otf"); }
+
+@font-face {
+  font-family: StellarLight;
+  src: url("../fonts/stellar/StellarLight.otf"); }
+
+@font-face {
+  font-family: MoonBold;
+  src: url("../fonts/moon/MoonBold.otf"); }
+
+@font-face {
+  font-family: MoonLight;
+  src: url("../fonts/moon/MoonLight.otf"); }

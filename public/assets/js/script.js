@@ -1,5 +1,5 @@
 var form = document.getElementById('email-form');
-var thankMessage = document.getElementById('thanks-message');
+var thanksMessage = document.getElementById('thanks-message');
 
 
 var xhr = new XMLHttpRequest();
@@ -34,7 +34,7 @@ form.addEventListener( 'submit' , function(e) {
 
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4 && xhr.status == 200) {
-            console.log('Success!');
+            console.log('Success request!');
         }
     };
 
