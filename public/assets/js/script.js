@@ -1,10 +1,11 @@
 var form = document.getElementById('email-form');
 var thanksMessage = document.getElementById('thanks-message');
-
+var progress = document.getElementById('progress-wrap');
 
 var xhr = new XMLHttpRequest();
 
 var progressMove = function () {
+    progress.style.display = 'block';
     var elem = document.getElementById('progress-bar');
     var width = 1;
     var id = setInterval(frame, 50);
@@ -18,7 +19,12 @@ var progressMove = function () {
     }
 };
 
+var showModal = function () {
+    $('#modal1').openModal();
+};
+
 form.addEventListener( 'submit' , function(e) {
+
 
     var firstName=document.getElementById('first_name').value;
     var lastName=document.getElementById('last_name').value;
@@ -34,7 +40,8 @@ form.addEventListener( 'submit' , function(e) {
 
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4 && xhr.status == 200) {
-            console.log('Success request!');
+            progressMove();
+            setTimeout( showModal, 2000);
         }
     };
 
