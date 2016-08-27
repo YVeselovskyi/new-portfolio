@@ -1,5 +1,4 @@
 var form = document.getElementById('email-form');
-var thanksMessage = document.getElementById('thanks-message');
 var progress = document.getElementById('progress-wrap');
 
 var xhr = new XMLHttpRequest();
@@ -45,19 +44,10 @@ form.addEventListener( 'submit' , function(e) {
         }
     };
 
-    xhr.open('POST', 'https://yveselovskyi.herokuapp.com/send-email', true);
+    xhr.open('POST', 'http://yveselovskyi.herokuapp.com/send-email', true);
     xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
 
     xhr.send(data);
 
     e.preventDefault();
 });
-
-
-
-
-
-
-
-
-
