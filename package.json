@@ -18,6 +18,9 @@
   "homepage": "https://github.com/YVeselovskyi/new-portfolio#readme",
   "dependencies": {
     "axios": "^0.15.2",
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-preset-es2015": "^6.18.0",
     "body-parser": "^1.15.2",
     "ejs": "^2.4.2",
     "ejs-mate": "^2.3.0",
@@ -27,6 +30,7 @@
     "gulp-watch": "^4.3.8",
     "nodemailer": "^2.5.0",
     "nodemailer-smtp-transport": "^2.7.2",
-    "request": "^2.78.0"
+    "request": "^2.78.0",
+    "webpack": "^1.13.3"
   }
 }
