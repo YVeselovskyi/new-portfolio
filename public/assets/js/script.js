@@ -3,11 +3,12 @@ var progress = document.getElementById('progress-wrap');
 
 var xhr = new XMLHttpRequest();
 
-var progressMove = function () {
+var progressMove = function() {
     progress.style.display = 'block';
     var elem = document.getElementById('progress-bar');
     var width = 1;
     var id = setInterval(frame, 50);
+
     function frame() {
         if (width >= 100) {
             clearInterval(id);
@@ -18,17 +19,17 @@ var progressMove = function () {
     }
 };
 
-var showModal = function () {
+var showModal = function() {
     $('#modal1').openModal();
 };
 
-form.addEventListener( 'submit' , function(e) {
+form.addEventListener('submit', function(e) {
 
-
-    var firstName=document.getElementById('first_name').value;
-    var lastName=document.getElementById('last_name').value;
-    var eMail=document.getElementById('email').value;
-    var message=document.getElementById('message').value;
+    e.preventDefault();
+    var firstName = document.getElementById('first_name').value;
+    var lastName = document.getElementById('last_name').value;
+    var eMail = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
 
     var data = JSON.stringify({
         firstName: firstName,
@@ -40,7 +41,7 @@ form.addEventListener( 'submit' , function(e) {
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4 && xhr.status == 200) {
             progressMove();
-            setTimeout( showModal, 2000);
+            setTimeout(showModal, 2000);
         }
     };
 
@@ -49,5 +50,5 @@ form.addEventListener( 'submit' , function(e) {
 
     xhr.send(data);
 
-    e.preventDefault();
+
 });
