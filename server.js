@@ -3,7 +3,7 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const app = express();
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 1927;
 const ejs = require('ejs');
 const ejsMate = require('ejs-mate');
 const nodemailer = require('nodemailer');
@@ -36,7 +36,7 @@ app.use('/', express.static(__dirname + '/public/assets'));
 app.post('/send-email' , (req, res) => {
 
   // create reusable transporter object using the default SMTP transport
-  let transporter = nodemailer.createTransport('smtps://yaroslavveselovskyi@gmail.com:19dynamokyiv94@smtp.gmail.com');
+  let transporter = nodemailer.createTransport('smtp://yaroslavveselovskyi@gmail.com:19dynamokyiv94@smtp.gmail.com');
 
   // setup e-mail data with unicode symbols
   let mailOptions = {
