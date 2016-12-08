@@ -106,9 +106,6 @@ canvas {
   display: block;
   vertical-align: bottom; }
 
-.cbalink {
-  display: none; }
-
 /* ---- stats.js ---- */
 .count-particles {
   background: #000022;
@@ -235,10 +232,3 @@ nav {
 
 .social-icons {
   display: flex; }
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-  .about {
-    flex-direction: column; }
-  .chapter-title, .chapter-about {
-    height: 50%;
-    width: 100%; } }

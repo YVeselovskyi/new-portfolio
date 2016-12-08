@@ -27,7 +27,7 @@ app.get('/works', (req, res) => {
 });
 
 app.get('/contacts', (req, res) => {
-    res.render('main/contacts', { title: 'Contacts' });
+    res.render('main/newcontacts', { title: 'Contacts' });
 });
 
 app.use('/', express.static(__dirname + '/public/assets'));

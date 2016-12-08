@@ -1,0 +1,27 @@
+<%- layout('boilerplate') -%>
+
+<link rel="stylesheet" href="css/contacts.css">
+
+<div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+        <div class="row">
+            <button id="contact-chat" class="btn">Contact</button>
+        </div>
+    </div>
+
+
+    <div class="hidden main-chat-window">
+        <div class="container">
+            <div class="row">
+                <div class="col m12">
+                    <div class="chat-box chat-box-default">
+                    </div>
+                </div>
+                <input id='user-message' type="text" placeholder="Type your answer here...">
+                <button id='send-to-bot' class="send-message btn">Send</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/contact-bot.js"></script>
