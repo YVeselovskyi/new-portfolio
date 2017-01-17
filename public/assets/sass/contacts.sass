@@ -1,3 +1,12 @@
+html
+  background: #000
+  overflow: hidden
+
+#user-message
+  color: #fff
+#user-message:focus
+  border-bottom: 1px solid #fff
+
 .bot-message
   position: relative
   -webkit-user-select: none
@@ -8,7 +17,7 @@
   position: relative
   padding: 12px 24px 12px 24px
   min-height: 40px
-  background: #f8f8f8
+  background: rgba(248, 248, 248, .8)
   border-radius: 0 20px 20px 20px
   height: auto
   margin-bottom: 15px
@@ -31,7 +40,7 @@
   position: relative
   padding: 12px 24px 12px 24px
   min-height: 40px
-  background: #e6f3fe
+  background: rgba(230, 243, 254, .8)
   border-radius: 20px 0 20px 20px
   height: auto
   margin-bottom: 15px
@@ -58,7 +67,6 @@ cf-input input
 .chat-box
   position: relative
   margin-bottom: 20px
-  background-color: #fff
   border: 1px solid transparent
   border-radius: 4px
 
@@ -105,3 +113,99 @@ cf-input input
   100%
     opacity: 1
 
+.footer-content
+  min-height: calc(100vh - 176px)
+
+footer.page-footer
+  height: 92px
+
+
+// n is number of stars required
+@function multiple-box-shadow ($n)
+  $value: '#{random(2000)}px #{random(2000)}px #FFF'
+  @for $i from 2 through $n
+    $value: '#{$value} , #{random(2000)}px #{random(2000)}px #FFF'
+
+  @return unquote($value)
+
+$shadows-small:  multiple-box-shadow(700)
+$shadows-medium: multiple-box-shadow(200)
+$shadows-big:    multiple-box-shadow(100)
+
+#stars
+  width: 1px
+  height: 1px
+  background: transparent
+  box-shadow: $shadows-small
+  animation			: animStar 50s linear infinite
+
+  &:after
+    content: " "
+    position: absolute
+    top: 2000px
+    width: 1px
+    height: 1px
+    background: transparent
+    box-shadow: $shadows-small
+
+#stars2
+  width: 2px
+  height: 2px
+  background: transparent
+  box-shadow: $shadows-medium
+  animation			: animStar 100s linear infinite
+
+  &:after
+    content: " "
+    position: absolute
+    top: 2000px
+    width: 2px
+    height: 2px
+    background: transparent
+    box-shadow: $shadows-medium
+
+#stars3
+  width: 3px
+  height: 3px
+  background: transparent
+  box-shadow: $shadows-big
+  animation			: animStar 150s linear infinite
+
+  &:after
+    content: " "
+    position: absolute
+    top: 2000px
+    width: 3px
+    height: 3px
+    background: transparent
+    box-shadow: $shadows-big
+
+#title
+  position: absolute
+  top: 50%
+  left: 0
+  right: 0
+
+  color: #FFF
+  text-align: center
+  font-weight: 300
+  letter-spacing: 10px
+
+  margin-top: -60px
+  padding-left: 10px
+
+
+@keyframes animStar
+  from
+    transform: translateY(0px)
+  to
+    transform: translateY(-2000px)
+
+.footer-name
+  text-align: right
+
+.custom-contact
+  background: transparent
+  &:hover
+    background: #fff
+    color: #000

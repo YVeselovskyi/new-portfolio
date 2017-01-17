@@ -34,13 +34,13 @@ app.get('/contacts', (req, res) => {
 app.use('/', express.static(__dirname + '/public/assets'));
 
 app.post('/send-message', (req, res) => {
-    request.post('https://api.vk.com/method/messages.send', { 
-    	formData: { 
+    request.post('https://api.vk.com/method/messages.send', {
+    	formData: {
     		user_id: 20099035,
     		message: JSON.stringify(req.body),
     		v: 5,
     		access_token: '894e049b68b77c8ce9d1f6910136a351070a1d601c06df5053aa18b9ac447463194c2599a8d447d66ff8b'
-    	} 
+    	}
     });
     res.end('done');
 });
@@ -50,5 +50,5 @@ app.use((req, res) => {
 });
 
 app.listen(port, () => {
-    console.log("Listening on " + port);
+    console.log('Listening on ' + port);
 });
