@@ -12,6 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.engine('ejs', ejsMate);
+
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
@@ -27,13 +28,12 @@ app.get('/works', (req, res) => {
 });
 
 app.get('/contacts', (req, res) => {
-    res.render('main/newcontacts', { title: 'Contacts' });
+    res.render('main/contacts', { title: 'Contacts' });
 });
 
 app.use('/', express.static(__dirname + '/public/assets'));
 
-app.post('/send-email', (req, res) => {
-    console.log(req.body);
+app.post('/send-message', (req, res) => {
     request.post('https://api.vk.com/method/messages.send', { 
     	formData: { 
     		user_id: 20099035,
@@ -45,7 +45,7 @@ app.post('/send-email', (req, res) => {
     res.end('done');
 });
 
-app.use((req, res, next) => {
+app.use((req, res) => {
     res.status(404).render('main/404');
 });
 
