@@ -20,15 +20,15 @@ app.get('/', (req, res) => {
 });
 
 app.get('/about', (req, res) => {
-    res.render('main/about', { title: 'About' });
+    res.render('main/about', { title: 'about' });
 });
 
 app.get('/works', (req, res) => {
-    res.render('main/works', { title: 'Works' });
+    res.render('main/works', { title: 'works' });
 });
 
 app.get('/contacts', (req, res) => {
-    res.render('main/contacts', { title: 'Contacts' });
+    res.render('main/contacts', { title: 'contacts' });
 });
 
 app.use('/', express.static(__dirname + '/public/assets'));
