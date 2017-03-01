@@ -20,3 +20,7 @@ footer.page-footer {
   .download-link:focus {
     background: #ffffff;
     color: #fff; }
+
+@media screen and (min-width: 301px) and (max-width: 500px) {
+  footer.page-footer {
+    height: auto; } }
