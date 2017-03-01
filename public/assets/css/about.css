@@ -1,0 +1,22 @@
+.intro {
+  color: #666666;
+  margin-bottom: 10px;
+  font-size: 18px; }
+
+.about-content {
+  min-height: calc(100vh - 176px); }
+
+footer.page-footer {
+  height: 92px; }
+
+.download-link {
+  background: transparent;
+  color: #000;
+  text-align: center;
+  font-weight: 300; }
+  .download-link:hover {
+    background: #fff;
+    color: #000; }
+  .download-link:focus {
+    background: #ffffff;
+    color: #fff; }
