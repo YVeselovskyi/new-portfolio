@@ -15,6 +15,12 @@
     height: 40px
     margin: 0 10px
 
+footer.page-footer
+    height: 92px
+
+.about-content, .works-content
+    min-height: calc(100vh - 186px)
+
 .social-icons  img
     width: 40px
     height: 40px
@@ -25,3 +31,11 @@
 .home-link
     text-decoration: none
     color: #ffffff
+
+@media screen and (min-width: 301px) and (max-width: 500px)
+    footer.page-footer
+        height: auto
+    .social-icons, .footer-info
+        display: block
+        text-align: center
+        margin: 0 auto
