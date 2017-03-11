@@ -113,9 +113,9 @@
 	            } else if (this.sentMessages > 2) {
 	                botAnswer.innerHTML = 'Good luck! Maybe later I will tell you some jokes 😅';
 	            }
-	            chatWindow.scrollTop = chatWindow.scrollHeight;
 	            this.sentMessages++;
 	            chatBox.appendChild(botAnswer);
+	            chatWindow.scrollTop = chatWindow.scrollHeight + 300;
 	        }
 	    }, {
 	        key: 'receiveMessage',
